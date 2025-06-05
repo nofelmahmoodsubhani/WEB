@@ -1,0 +1,110 @@
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --bg-color: #111827;
+  --text-color: #f1f5f9;
+  --accent-color: #10b981;
+  --secondary-color: #1f2937;
+}
+[data-theme="light"] {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --accent-color: #2563eb;
+  --secondary-color: #e5e7eb;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+}
+.navbar-brand, .nav-link {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-color);
+}
+.theme-toggle {
+  cursor: pointer;
+  color: var(--accent-color);
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, var(--bg-color) 60%, var(--secondary-color));
+}
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    text-align: start;
+  }
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+.hero-text h2 {
+  font-size: 1.5rem;
+}
+.hero-text p {
+  font-size: 1rem;
+}
+.hero-image img {
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 0 25px rgba(16,185,129,0.4);
+  border-radius: 50%;
+}
+.section {
+  padding: 60px 0;
+}
+.section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+.card-section {
+  background: linear-gradient(145deg, var(--secondary-color), var(--bg-color));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-section:hover {
+  background: linear-gradient(145deg, #6a0dad, var(--secondary-color));
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+}
+.resume-download {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+footer {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
